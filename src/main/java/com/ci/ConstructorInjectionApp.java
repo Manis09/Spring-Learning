@@ -8,6 +8,8 @@ public class ConstructorInjectionApp {
         ApplicationContext context=new ClassPathXmlApplicationContext("ciconfig.xml");
         Student stu = context.getBean("stu", Student.class);
         System.out.println(stu);
+        Student stu1 = context.getBean("stu1", Student.class);
+        System.out.println(stu1);
     }
 
 }

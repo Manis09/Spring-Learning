@@ -22,4 +22,21 @@
         </constructor-arg>
     </bean>
 
+    <bean name="ad1" class="com.ci.Address">
+        <constructor-arg name="id" value="2"/>
+        <constructor-arg name="city" value="Indore"/>
+    </bean>
+
+    <bean name="stu1" class="com.ci.Student">
+        <constructor-arg name="id" value="102"/>
+        <constructor-arg name="name" value="Lucky Bhawsar"/>
+        <constructor-arg ref="ad1"/>
+        <constructor-arg name="course">
+            <list>
+                <value>Java</value>
+                <value>Python</value>
+            </list>
+        </constructor-arg>
+    </bean>
+
 </beans>
