@@ -6,11 +6,6 @@
        xsi:schemaLocation="
         http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
 
-
-    <bean name="stu" class="com.beanlifecycle.xmlbased.Student" init-method="init" destroy-method="destroy">
-        <property name="id" value="1"/>
-        <property name="name" value="Manish"/>
-    </bean>
-
+    <bean name="stu" class="com.beanlifecycle.impl.Student" p:id="101" p:name="Manish"/>
 
 </beans>

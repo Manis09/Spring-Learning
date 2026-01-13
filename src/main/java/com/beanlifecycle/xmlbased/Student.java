@@ -1,4 +1,4 @@
-package beanlifecycle.xmlbased;
+package com.beanlifecycle.xmlbased;
 
 public class Student {
     private int id;
