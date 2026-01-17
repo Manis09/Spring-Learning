@@ -6,6 +6,6 @@
        xsi:schemaLocation="
         http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
 
-    <bean name="stu" class="com.beanlifecycle.impl.Student" p:id="101" p:name="Manish"/>
+    <bean name="stu" class="com.springcore.beanlifecycle.impl.Student" p:id="101" p:name="Manish"/>
 
 </beans>

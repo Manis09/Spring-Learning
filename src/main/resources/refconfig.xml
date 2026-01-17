@@ -5,14 +5,14 @@
        xsi:schemaLocation="
         http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
 
-    <bean name="ad" class="com.referencetype.Address">
+    <bean name="ad" class="com.springcore.referencetype.Address">
         <property name="city" value="Bhopal"/>
         <property name="state" value="Madhya Pradesh"/>
     </bean>
 
-    <bean name="ad2" class="com.referencetype.Address" p:city="Indore" p:state="Madhya Pradesh"/>
+    <bean name="ad2" class="com.springcore.referencetype.Address" p:city="Indore" p:state="Madhya Pradesh"/>
 
-    <bean name="stu1" class="com.referencetype.Student">
+    <bean name="stu1" class="com.springcore.referencetype.Student">
         <property name="id" value="101"/>
         <property name="name" value="Manish Bhawsar"/>
         <property name="address">
@@ -20,6 +20,6 @@
         </property>
     </bean>
 
-    <bean name="stu2" class="com.referencetype.Student" p:id="102" p:name="Lucky Bhawsar" p:address-ref="ad2"/>
+    <bean name="stu2" class="com.springcore.referencetype.Student" p:id="102" p:name="Lucky Bhawsar" p:address-ref="ad2"/>
 
 </beans>

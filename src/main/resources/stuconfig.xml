@@ -6,10 +6,10 @@
         http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
 
     <!-- bean definitions here -->
- <bean name="stu1" class="com.primitivetype.Student" p:id="101" p:name="Manish Bhawsar" p:address="Bhopal"/>
+ <bean name="stu1" class="com.springcore.primitivetype.Student" p:id="101" p:name="Manish Bhawsar" p:address="Bhopal"/>
 
 
-    <bean name="stu2" class="com.primitivetype.Student">
+    <bean name="stu2" class="com.springcore.primitivetype.Student">
         <property name="id" value="102"/>
         <property name="name" value="Lucky Bhawsar"/>
         <property name="address" value="Indore"/>

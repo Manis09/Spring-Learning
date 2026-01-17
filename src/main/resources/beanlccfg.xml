@@ -7,7 +7,7 @@
         http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
 
 
-    <bean name="stu" class="com.beanlifecycle.xmlbased.Student" init-method="init" destroy-method="destroy">
+    <bean name="stu" class="com.springcore.beanlifecycle.xmlbased.Student" init-method="init" destroy-method="destroy">
         <property name="id" value="1"/>
         <property name="name" value="Manish"/>
     </bean>
