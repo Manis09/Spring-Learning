@@ -5,7 +5,7 @@
        xsi:schemaLocation="
         http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
 
-    <bean name="emailService" class="com.setterinjection.EmailService"/>
-    <bean name="smsService" class="com.setterinjection.MsgService"/>
-    <bean name="reportService" class="com.setterinjection.ReportService" p:messegeService-ref="emailService"/>
+    <bean name="emailService" class="com.springcore.setterinjection.EmailService"/>
+    <bean name="smsService" class="com.springcore.setterinjection.MsgService"/>
+    <bean name="reportService" class="com.springcore.setterinjection.ReportService" p:messegeService-ref="emailService"/>
 </beans>
