@@ -8,5 +8,11 @@ public class App {
         ApplicationContext context =new AnnotationConfigApplicationContext("com.springcore.annotationbasedcfg");
         Student student = context.getBean("getStudent", Student.class);
         System.out.println(student);
+        Student student1 = context.getBean("getStudent", Student.class);
+        System.out.println(student1);
+
+        System.out.println(student.hashCode());
+        System.out.println(student1.hashCode());
+
     }
 }
