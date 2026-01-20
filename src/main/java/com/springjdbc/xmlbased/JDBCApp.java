@@ -1,6 +1,8 @@
 package com.springjdbc.xmlbased;
 
+import com.springjdbc.crudoperation.Employee;
 import com.springjdbc.crudoperation.Student;
+import com.springjdbc.dao.EmployeeImpl;
 import com.springjdbc.dao.StudentDaoimpl;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
@@ -17,7 +19,7 @@ public class JDBCApp {
         int update = jdbcTemplate.update(query,1,"Manish","Bhawsar");
         System.out.println("Successfully inserted "+update);*/
 
-        StudentDaoimpl stdao = context.getBean("stdao", StudentDaoimpl.class);
+        /*StudentDaoimpl stdao = context.getBean("stdao", StudentDaoimpl.class);
 
         Student st=new Student();
         st.setStu_id(4);
@@ -25,7 +27,20 @@ public class JDBCApp {
         st.setL_name("Surwase");
 
         int insert = stdao.insert(st);
-        System.out.println("Inserted successfully: "+insert);
+        System.out.println("Inserted successfully: "+insert);*/
+
+        EmployeeImpl empdao = context.getBean("empdao", EmployeeImpl.class);
+
+        Employee emp=new Employee();
+        emp.setId(2);
+        emp.setName("Dany");
+        emp.setDept("IT");
+
+        int insert = empdao.insert(emp);
+        System.out.println("Successfully updated : " +insert);
+
+        Employee employee = empdao.getEmployee(1);
+        System.out.println(employee);
 
     }
 }

@@ -1,22 +1,30 @@
 package com.springjdbc.dao;
 
 import com.springjdbc.crudoperation.Student;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.jdbc.core.RowMapper;
+import org.springframework.stereotype.Component;
 
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.List;
-
+@Component("stdao")
 public class StudentDaoimpl implements StudentDao{
 
     JdbcTemplate jdbcTemplate;
 
-    public JdbcTemplate getJdbcTemplate() {
-        return jdbcTemplate;
-    }
-
-    public void setJdbcTemplate(JdbcTemplate jdbcTemplate) {
+//    public JdbcTemplate getJdbcTemplate() {
+//        return jdbcTemplate;
+//    }
+//
+//    public void setJdbcTemplate(JdbcTemplate jdbcTemplate) {
+//        System.out.println("setter");
+//        this.jdbcTemplate = jdbcTemplate;
+//    }
+    @Autowired
+    public StudentDaoimpl(JdbcTemplate jdbcTemplate) {
+        System.out.println("constructor");
         this.jdbcTemplate = jdbcTemplate;
     }
 

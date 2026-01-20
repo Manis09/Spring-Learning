@@ -2,12 +2,13 @@ package com.springjdbc.annotationjdbccfg;
 
 import com.springjdbc.dao.StudentDaoimpl;
 import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.jdbc.datasource.DriverManagerDataSource;
 
 import javax.sql.DataSource;
-
+@ComponentScan(basePackages = "com.springjdbc.dao")
 @Configuration
 public class Config {
 /**Here we created the driver manager data source object and set the values for DriverManager,URL,USERNAME,PASSWORD and get the
@@ -29,5 +30,11 @@ public class Config {
         jd.setDataSource(getDataSource());
         return jd;
     }
+//    @Bean(name="dao")
+//    public StudentDaoimpl getStdao(){
+//        StudentDaoimpl dao=new StudentDaoimpl();
+//        dao.setJdbcTemplate(getJdbcTemplet());
+//        return dao;
+//    }
 
 }

@@ -20,7 +20,11 @@
         </property>
     </bean>
 
-    <bean name="stdao" class="com.springjdbc.dao.StudentDaoimpl">
+    <!--<bean name="stdao" class="com.springjdbc.dao.StudentDaoimpl">
+        <property name="jdbcTemplate" ref="jdbcTemplate"/>
+    </bean>-->
+
+    <bean name="empdao" class="com.springjdbc.dao.EmployeeImpl">
         <property name="jdbcTemplate" ref="jdbcTemplate"/>
     </bean>
 
